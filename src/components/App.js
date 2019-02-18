@@ -2,6 +2,8 @@ import React from 'react'
 import unsplash from '../api/unsplash'
 import SearchBar from './SearchBar'
 
+import ImageList from './ImageList'
+
 // const APIKEY = '4a139e6abe63d23195d444b2fc9caf888ae2efc254f38aece127b2cff689d56a'
 
 
@@ -22,7 +24,7 @@ class App extends React.Component {
     return (
       <div className="ui container" style={{marginTop: '10px'}}>
         <SearchBar onSubmit={this.onSearchSubmit}/>
-        Found {this.state.images.length} Images
+        <ImageList images={this.state.images}/>
       </div>
 
     );
